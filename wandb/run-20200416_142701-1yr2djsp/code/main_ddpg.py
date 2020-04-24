@@ -1,6 +1,6 @@
 from citylearn import  CityLearn
 from pathlib import Path
-from agent import RL_Agents
+from ddpg import Agent
 import numpy as np
 
 # Select the climate zone and load environment
@@ -21,7 +21,7 @@ building_info = env.get_building_information()
 
 # RL CONTROLLER
 #Instantiating the control agent(s)
-agents = RL_Agents(building_info, observations_spaces, actions_spaces)
+agents = Agent(env, building_info, observations_spaces, actions_spaces)
 
 # Select many episodes for training. In the final run we will set this value to 1 (the buildings run for one year)
 episodes = 10

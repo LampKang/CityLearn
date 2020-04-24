@@ -1,0 +1,8 @@
+C:\Users\ailab6\.conda\envs\citylearn\lib\site-packages\gym\logger.py:30: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
+Traceback (most recent call last):
+  File "c:/Users/ailab6/Documents/GitHub/CityLearn - 복사본/main_ddpg.py", line 24, in <module>
+    agents = Agent(env, building_info, observations_spaces, actions_spaces)
+  File "c:\Users\ailab6\Documents\GitHub\CityLearn - 복사본\ddpg.py", line 129, in __init__
+    self.actor[i] = Actor(self.state_dim[i], self.action_dim[i], self.action_bound[i])
+AttributeError: 'Agent' object has no attribute 'actor'

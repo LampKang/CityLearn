@@ -1,0 +1,25 @@
+{
+    "root": "C:/Users/ailab6/Documents/GitHub/CityLearn - \ubcf5\uc0ac\ubcf8",
+    "program": "c:/Users/ailab6/Documents/GitHub/CityLearn - \ubcf5\uc0ac\ubcf8/main_ddpg.py",
+    "git": {
+        "remote": "https://github.com/LampKang/CityLearn.git",
+        "commit": "e88652d3ea2bd0e26ae210432dd2d53346aabe9c"
+    },
+    "email": "47997051+LampKang@users.noreply.github.com",
+    "codePath": "main_ddpg.py",
+    "startedAt": "2020-04-16T14:27:01.902553",
+    "host": "ailab6",
+    "username": "ailab6",
+    "executable": "C:\\Users\\ailab6\\.conda\\envs\\citylearn\\python.exe",
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.7.7",
+    "cpu_count": 8,
+    "args": [],
+    "state": "failed",
+    "jobType": null,
+    "mode": "run",
+    "name": "DDPG",
+    "project": "deep-rl-tf2",
+    "heartbeatAt": "2020-04-16T14:27:10.150303",
+    "exitcode": 1
+}

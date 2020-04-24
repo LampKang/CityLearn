@@ -1,0 +1,37 @@
+2020-04-23 23:17:41,236 DEBUG   MainThread:404 [wandb_config.py:_load_defaults():122] no defaults not found in config-defaults.yaml
+2020-04-23 23:17:41,265 DEBUG   MainThread:404 [meta.py:setup():97] code probe starting
+2020-04-23 23:17:41,265 DEBUG   MainThread:404 [meta.py:setup():101] non time limited probe of code
+2020-04-23 23:17:41,309 DEBUG   MainThread:404 [meta.py:_setup_code_git():49] probe for git information
+2020-04-23 23:17:41,527 DEBUG   MainThread:404 [meta.py:_setup_code_program():58] save program starting
+2020-04-23 23:17:41,527 DEBUG   MainThread:404 [meta.py:_setup_code_program():60] save program starting: c:/Users/ailab6/Documents/GitHub/CityLearn - 복사본/main_ppo.py
+2020-04-23 23:17:41,529 DEBUG   MainThread:404 [meta.py:_setup_code_program():65] save program saved: C:\Users\ailab6\Documents\GitHub\CityLearn - 복사본\wandb\run-20200423_141739-3qw7yws5\code\main_ppo.py
+2020-04-23 23:17:41,529 DEBUG   MainThread:404 [meta.py:_setup_code_program():67] save program
+2020-04-23 23:17:41,531 DEBUG   MainThread:404 [meta.py:setup():119] code probe done
+2020-04-23 23:17:41,535 DEBUG   MainThread:404 [run_manager.py:__init__():545] Initialized sync for deep-rl-tf2/3qw7yws5
+2020-04-23 23:17:41,540 INFO    MainThread:404 [run_manager.py:wrap_existing_process():1148] wrapping existing process 25716
+2020-04-23 23:17:42,069 INFO    MainThread:404 [run_manager.py:init_run():928] system metrics and metadata threads started
+2020-04-23 23:17:42,081 INFO    MainThread:404 [run_manager.py:init_run():967] upserting run before process can begin, waiting at most 10 seconds
+2020-04-23 23:17:42,263 INFO    Thread-7  :404 [run_manager.py:_on_file_modified():692] file/dir modified: C:\Users\ailab6\Documents\GitHub\CityLearn - 복사본\wandb\run-20200423_141739-3qw7yws5\config.yaml
+2020-04-23 23:17:42,538 INFO    Thread-20 :404 [run_manager.py:_upsert_run():1052] saving patches
+2020-04-23 23:17:43,222 INFO    Thread-20 :404 [run_manager.py:_upsert_run():1056] saving pip packages
+2020-04-23 23:17:43,223 INFO    Thread-20 :404 [run_manager.py:_upsert_run():1058] initializing streaming files api
+2020-04-23 23:17:43,224 INFO    Thread-20 :404 [run_manager.py:_upsert_run():1065] unblocking file change observer, beginning sync with W&B servers
+2020-04-23 23:17:43,224 INFO    MainThread:404 [run_manager.py:wrap_existing_process():1165] informing user process we are ready to proceed
+2020-04-23 23:17:43,227 INFO    MainThread:404 [run_manager.py:_sync_etc():1272] entering loop for messages from user process
+2020-04-23 23:17:43,565 INFO    Thread-7  :404 [run_manager.py:_on_file_created():681] file/dir created: C:\Users\ailab6\Documents\GitHub\CityLearn - 복사본\wandb\run-20200423_141739-3qw7yws5\output.log
+2020-04-23 23:17:43,565 INFO    Thread-7  :404 [run_manager.py:_on_file_created():681] file/dir created: C:\Users\ailab6\Documents\GitHub\CityLearn - 복사본\wandb\run-20200423_141739-3qw7yws5\wandb-metadata.json
+2020-04-23 23:17:43,566 INFO    Thread-7  :404 [run_manager.py:_on_file_created():681] file/dir created: C:\Users\ailab6\Documents\GitHub\CityLearn - 복사본\wandb\run-20200423_141739-3qw7yws5\code\main_ppo.py
+2020-04-23 23:17:43,567 INFO    Thread-7  :404 [run_manager.py:_on_file_created():681] file/dir created: C:\Users\ailab6\Documents\GitHub\CityLearn - 복사본\wandb\run-20200423_141739-3qw7yws5\code
+2020-04-23 23:17:43,567 INFO    Thread-7  :404 [run_manager.py:_on_file_modified():692] file/dir modified: C:\Users\ailab6\Documents\GitHub\CityLearn - 복사본\wandb\run-20200423_141739-3qw7yws5\output.log
+2020-04-23 23:17:43,568 INFO    Thread-7  :404 [run_manager.py:_on_file_modified():692] file/dir modified: C:\Users\ailab6\Documents\GitHub\CityLearn - 복사본\wandb\run-20200423_141739-3qw7yws5\config.yaml
+2020-04-23 23:17:43,569 INFO    Thread-7  :404 [run_manager.py:_on_file_created():681] file/dir created: C:\Users\ailab6\Documents\GitHub\CityLearn - 복사본\wandb\run-20200423_141739-3qw7yws5\diff.patch
+2020-04-23 23:17:43,569 INFO    Thread-7  :404 [run_manager.py:_on_file_created():681] file/dir created: C:\Users\ailab6\Documents\GitHub\CityLearn - 복사본\wandb\run-20200423_141739-3qw7yws5\requirements.txt
+2020-04-23 23:17:47,930 INFO    MainThread:404 [run_manager.py:_sync_etc():1295] received message from user process: {"exitcode": 1}
+2020-04-23 23:17:47,931 INFO    MainThread:404 [run_manager.py:_sync_etc():1381] closing log streams and sending exitcode to W&B
+2020-04-23 23:17:47,932 INFO    MainThread:404 [run_manager.py:shutdown():1072] shutting down system stats and metadata service
+2020-04-23 23:17:48,089 INFO    MainThread:404 [run_manager.py:shutdown():1084] stopping streaming files and file change observer
+2020-04-23 23:17:48,330 INFO    Thread-7  :404 [run_manager.py:_on_file_modified():692] file/dir modified: C:\Users\ailab6\Documents\GitHub\CityLearn - 복사본\wandb\run-20200423_141739-3qw7yws5\wandb-metadata.json
+2020-04-23 23:17:48,335 INFO    MainThread:404 [run_manager.py:_on_file_modified():692] file/dir modified: C:\Users\ailab6\Documents\GitHub\CityLearn - 복사본\wandb\run-20200423_141739-3qw7yws5\output.log
+2020-04-23 23:17:48,337 INFO    MainThread:404 [run_manager.py:_on_file_created():681] file/dir created: C:\Users\ailab6\Documents\GitHub\CityLearn - 복사본\wandb\run-20200423_141739-3qw7yws5\wandb-events.jsonl
+ MainThread:404 [3qw7yws5:run_manager.py:_on_file_modified():692] file/dir modified: C:\Users\ailab6\Documents\GitHub\CityLearn - 복사본\wandb\run-20200423_141739-3qw7yws5\output.log
+2020-04-23 23:17:48,337 INFO    MainThread:404 [3qw7yws5:run_manager.py:_on_file_created():681] file/dir created: C:\Users\ailab6\Documents\GitHub\CityLearn - 복사본\wandb\run-20200423_141739-3qw7yws5\wandb-events.jsonl

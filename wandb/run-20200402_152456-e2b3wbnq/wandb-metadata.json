@@ -1,0 +1,25 @@
+{
+    "root": "C:/Users/ailab6/Documents/GitHub/CityLearn - \ubcf5\uc0ac\ubcf8",
+    "program": "c:/Users/ailab6/Documents/GitHub/CityLearn - \ubcf5\uc0ac\ubcf8/dqn.py",
+    "git": {
+        "remote": "https://github.com/LampKang/CityLearn.git",
+        "commit": "e88652d3ea2bd0e26ae210432dd2d53346aabe9c"
+    },
+    "email": "47997051+LampKang@users.noreply.github.com",
+    "codePath": "dqn.py",
+    "startedAt": "2020-04-02T15:25:19.142670",
+    "host": "ailab6",
+    "username": "ailab6",
+    "executable": "C:\\Users\\ailab6\\.conda\\envs\\citylearn\\python.exe",
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.7.7",
+    "cpu_count": 8,
+    "args": [],
+    "state": "failed",
+    "jobType": null,
+    "mode": "dryrun",
+    "name": "DQN",
+    "project": "deep-rl-tf2",
+    "heartbeatAt": "2020-04-02T15:25:24.539825",
+    "exitcode": 1
+}

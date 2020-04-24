@@ -1,0 +1,7 @@
+C:\Users\ailab6\.conda\envs\citylearn\lib\site-packages\gym\logger.py:30: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
+hour: 0 of 87600
+Traceback (most recent call last):
+  File "c:/Users/ailab6/Documents/GitHub/CityLearn - 복사본/main_ppo.py", line 46, in <module>
+    old_log_policy, action = agents.actor[i].select_action(state)
+AttributeError: 'Actor' object has no attribute 'select_action'

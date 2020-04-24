@@ -26,7 +26,7 @@ class Buffer:
             r.append(values[2])
             s_next.append(values[3])
             done.append([4])
-        return torch.tensor(s,dtype=torch.float32), torch.tensor(a,dtype=torch.float32), torch.tensor(r,dtype=torch.float32), torch.tensor(s_next,dtype=torch.float32), done
+        return torch.tensor(s,dtype=torch.float32).cuda(), torch.tensor(a,dtype=torch.float32).cuda(), torch.tensor(r,dtype=torch.float32).cuda(), torch.tensor(s_next,dtype=torch.float32).cuda(), done
     
     def __len__(self):
          return len(self.buffer)
@@ -101,7 +101,7 @@ class RL_Agents:
         self.min_samples_training = 400 #Min number of tuples that are stored in the batch before the training process begins
         
         # Parameters
-        self.device = "cpu"
+        self.device = "cuda:0"
         self.time_step = 0
         self.building_info = building_info # Can be used to create different RL agents based on basic building attributes or climate zones
         self.observation_spaces = observation_spaces
@@ -135,7 +135,7 @@ class RL_Agents:
         
         actions = []
         for i, state in enumerate(states):
-            a = self.actor[i](torch.tensor(state, dtype=torch.float32))
+            a = self.actor[i](torch.tensor(state, dtype=torch.float32).cuda())
             self.a_track1.append(a)
             a = a.cpu().detach().numpy() + expl_noise * np.random.normal(loc = 0, scale = self.max_action, size=a.shape)
             self.a_track2.append(a)

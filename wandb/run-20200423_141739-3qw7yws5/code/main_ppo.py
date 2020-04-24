@@ -1,8 +1,8 @@
 from citylearn import  CityLearn
 from pathlib import Path
-from agent import RL_Agents
+from ppo import Agent
 import numpy as np
-
+import time
 # Select the climate zone and load environment
 climate_zone = 1
 data_path = Path("data/Climate_Zone_"+str(climate_zone))
@@ -21,14 +21,14 @@ building_info = env.get_building_information()
 
 # RL CONTROLLER
 #Instantiating the control agent(s)
-agents = RL_Agents(building_info, observations_spaces, actions_spaces)
+agents = Agent(env, building_info, observations_spaces, actions_spaces)
 
 # Select many episodes for training. In the final run we will set this value to 1 (the buildings run for one year)
 episodes = 10
 
 k, c = 0, 0
 cost, cum_reward = {}, {}
-
+start = time.time()
 # The number of episodes can be replaces by a stopping criterion (i.e. convergence of the average reward)
 for e in range(episodes):     
     cum_reward[e] = 0
@@ -38,17 +38,25 @@ for e in range(episodes):
     while not done:
         if k%(1000)==0:
             print('hour: '+str(k)+' of '+str(8760*episodes))
-            
-        action = agents.select_action(state)
-        next_state, reward, done, _ = env.step(action)
+
+        actions = {}
+        old_log_policy = {}
+
+        for i in range(agents.n_buildings):
+            old_log_policy, action = agents.actor[i].select_action(state)
+            actions.append(action)
+        
+        next_state, reward, done, _ = env.step(actions)
         agents.add_to_buffer(state, action, reward, next_state, done)
         state = next_state
         
         cum_reward[e] += reward[0]
         rewards.append(reward)
         k+=1
-        
+
     cost[e] = env.cost()
-    if c%20==0:
+    if c%1==0:
         print(cost[e])
     c+=1
+
+print(time.time() - start)

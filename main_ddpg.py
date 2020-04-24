@@ -1,8 +1,8 @@
 from citylearn import  CityLearn
 from pathlib import Path
-from agent import RL_Agents
+from ddpg import Agent
 import numpy as np
-
+import time
 # Select the climate zone and load environment
 climate_zone = 1
 data_path = Path("data/Climate_Zone_"+str(climate_zone))
@@ -21,14 +21,14 @@ building_info = env.get_building_information()
 
 # RL CONTROLLER
 #Instantiating the control agent(s)
-agents = RL_Agents(building_info, observations_spaces, actions_spaces)
+agents = Agent(env, building_info, observations_spaces, actions_spaces)
 
 # Select many episodes for training. In the final run we will set this value to 1 (the buildings run for one year)
 episodes = 10
 
 k, c = 0, 0
 cost, cum_reward = {}, {}
-
+start = time.time()
 # The number of episodes can be replaces by a stopping criterion (i.e. convergence of the average reward)
 for e in range(episodes):     
     cum_reward[e] = 0
@@ -47,8 +47,15 @@ for e in range(episodes):
         cum_reward[e] += reward[0]
         rewards.append(reward)
         k+=1
-        
+
+    #ddpg
+    #if  agents.buffer.size() >= 64 and agents.buffer.size() >= 2000:
+        #agents.replay()     
+    agents.replay()     
+
     cost[e] = env.cost()
-    if c%20==0:
+    if c%1==0:
         print(cost[e])
     c+=1
+
+print(time.time() - start)
